@@ -23,6 +23,8 @@ void Unit::GetDamag(int damag) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Unit& unit) {
-    os << "Name: " << unit.name << " HP: " << unit.hp << " Speed: " << unit.speed;
+    os << "Name: " << unit.name << " HP: " << unit.hp << " Speed: " << unit.speed << std::endl;
+    if (unit.hp <= 0)
+        std::cout << "Dead";
     return os;
 }
