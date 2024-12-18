@@ -1,14 +1,15 @@
 #include "archer.h"
 #include "mage.h"
 #include "swordsman.h"
+#include "bow.h"
 
-archer::archer(std::string name, std::string weaponName, int weaponDam, int hp, unsigned int arrows) : Unit(name, weaponName, weaponDam, hp), arrows(arrows) {}
+archer::archer(std::string name, bow weap, int hp, unsigned int arrows) : Unit(name, hp), arrows(arrows) {}
 
 void archer::AttakArcher(archer& enemy) {
     if (!IsInDefenceó) {
         if (arrows > 0) {
             --arrows;
-            enemy.GetDamag(weapon.GetDamage());
+            enemy.GetDamag(weaponn.GetDamage());
             std::cout << name << " shoots at archer " << enemy.name << "!\n";
         }
         else {
@@ -24,7 +25,7 @@ void archer::AttakMage(mage& enemy) {
     if (!IsInDefenceó) {
         if (arrows > 0) {
             --arrows;
-            enemy.GetDamag(weapon.GetDamage());
+            enemy.GetDamag(weaponn.GetDamage());
             std::cout << name << " shoots at archer " << "!\n";
         }
         else {
@@ -40,7 +41,7 @@ void archer::AttakSwordsman(swordsman& enemy) {
     if (!IsInDefenceó) {
         if (arrows > 0) {
             --arrows;
-            enemy.GetDamag(weapon.GetDamage());
+            enemy.GetDamag(weaponn.GetDamage());
             std::cout << name << " shoots at archer " << "!\n";
         }
         else {

@@ -4,13 +4,13 @@
 #include "sword.h"
 #include <iostream>
 
-swordsman::swordsman(std::string name, std::string weaponName, int hp, unsigned int pow, int weaponDamag) : Unit(name, weaponName, weaponDamag, hp), pow(pow) {
+swordsman::swordsman(std::string name, sword weap, int hp, unsigned int pow) : Unit(name, hp), pow(pow) {
 }
 
 void swordsman::AttakArcher(archer& enemy) {
     if (!IsInDefenceó) {
-        enemy.GetDamag(weapon.GetDamage());
-        std::cout << name << " atacks " << " damage is " << (weapon.GetDamage()+pow) << "\n";
+        enemy.GetDamag(weaponn.GetDamage());
+        std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage()+pow) << "\n";
     }
     else {
         std::cout << name << "InDefence\n";
@@ -19,8 +19,8 @@ void swordsman::AttakArcher(archer& enemy) {
 
 void swordsman::AttakMage(mage& enemy) {
     if (!IsInDefenceó) {
-        enemy.GetDamag(weapon.GetDamage());
-        std::cout << name << " atacks " << " damage is " << (weapon.GetDamage() + pow) << "\n";
+        enemy.GetDamag(weaponn.GetDamage());
+        std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage() + pow) << "\n";
     }
     else {
         std::cout << name << "InDefence\n";
@@ -29,8 +29,8 @@ void swordsman::AttakMage(mage& enemy) {
 
 void swordsman::AttakSwordsman(swordsman& enemy) {
     if (!IsInDefenceó) {
-        enemy.GetDamag(weapon.GetDamage());
-        std::cout << name << " atacks " << " damage is " << (weapon.GetDamage() + pow) << "\n";
+        enemy.GetDamag(weaponn.GetDamage());
+        std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage() + pow) << "\n";
     }
     else {
         std::cout << name << "InDefence\n";

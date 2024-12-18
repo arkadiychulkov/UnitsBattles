@@ -3,6 +3,10 @@ weapon::weapon(std::string name, unsigned int damage)
     : name(name), damage(damage), grade(Common) {
 }
 
+weapon::weapon()
+    : name("weapon"), damage(10), grade(Common) {
+}
+
 weapon::weapon(std::string name)
     : name(name), damage(10), grade(Common) {
 }

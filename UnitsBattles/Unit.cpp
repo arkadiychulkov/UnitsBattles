@@ -1,11 +1,13 @@
 #include "Unit.h"
-Unit::Unit(std::string name, std::string weaponName, int weaponDam, int hp) : name(name), hp(hp), speed(0), IsInDefenceó(false), weapon(weaponName, weaponDam) {
+#include "weapon.h"
+
+Unit::Unit(std::string name, int hp) : name(name), hp(hp), speed(0), IsInDefenceó(false) {
 }
 
 void Unit::Attak(Unit& enemy) {
     if (!IsInDefenceó) {
-        enemy.hp -= weapon.GetDamage();
-        std::cout << name << " atacks " << enemy.name << " damage is " << weapon.GetDamage() << "\n";
+        enemy.hp -= weaponn.GetDamage();
+        std::cout << name << " atacks " << enemy.name << " damage is " << weaponn.GetDamage() << "\n";
     }
     else {
         std::cout << name << "InDefence\n";

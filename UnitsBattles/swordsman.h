@@ -3,13 +3,14 @@
 #include "mage.h"
 #include "archer.h"
 #include "swordsman.h"
+#include"sword.h"
 
 class swordsman : public Unit {
 private:
     unsigned int pow;
 
 public:
-    swordsman(std::string name, std::string weaponName, int hp, unsigned int pow, int weaponDamag);
+    swordsman(std::string name, sword weap, int hp, unsigned int pow);
     void AttakArcher(archer& enemy);
     void AttakMage(mage& enemy);
     void AttakSwordsman(swordsman& enemy);

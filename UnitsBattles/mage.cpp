@@ -1,13 +1,14 @@
 #include "mage.h"
 #include "archer.h"
 #include "swordsman.h"
+#include "stick.h"
 
-mage::mage(std::string name, std::string weaponName, int weaponDam, int hp, unsigned int mana) : Unit(name, weaponName, weaponDam, hp), mana(mana) {}
+mage::mage(std::string name, stick weap, int hp, unsigned int mana) : Unit(name, hp), mana(mana) {}
 
 void mage::AttakArcher(archer& enemy) {
     if (mana >= 10) {
         mana -= 10;
-        enemy.GetDamag(weapon.GetDamage());
+        enemy.GetDamag(weaponn.GetDamage());
         std::cout << name << " shoots at archer " << "\n";
     }
     else {
@@ -18,7 +19,7 @@ void mage::AttakArcher(archer& enemy) {
 void mage::AttakMage(mage& enemy) {
     if (mana >= 10) {
         mana -= 10;
-        enemy.GetDamag(weapon.GetDamage());
+        enemy.GetDamag(weaponn.GetDamage());
         std::cout << name << " shoots at archer " << "\n";
     }
     else {
@@ -29,7 +30,7 @@ void mage::AttakMage(mage& enemy) {
 void mage::AttakSwordsman(swordsman& enemy) {
     if (mana >= 10) {
         mana -= 10;
-        enemy.GetDamag(weapon.GetDamage());
+        enemy.GetDamag(weaponn.GetDamage());
         std::cout << name << " shoots at archer " << "\n";
     }
     else {

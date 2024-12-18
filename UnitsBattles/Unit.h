@@ -5,12 +5,12 @@
 class Unit
 {
 protected:
-	weapon weapon;
+	weapon weaponn;
 	int hp, speed;
 	std::string name;
 	bool IsInDefenceó;
 public:
-	Unit(std::string name, std::string weaponName, int hp, int weaponDamag);
+	Unit(std::string name, int hp);
 	 
 	void Attak(Unit& enemy);
 	void Defence();

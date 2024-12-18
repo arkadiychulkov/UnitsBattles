@@ -1,5 +1,7 @@
 #pragma once
 #include "Unit.h"
+#include"stick.h"
+
 class mage;
 class archer;
 class swordsman;
@@ -9,7 +11,7 @@ private:
     unsigned int mana;
 
 public:
-    mage(std::string name, std::string weaponName, int weaponDam, int hp, unsigned int mana);
+    mage(std::string name, stick weap, int hp, unsigned int mana);
     void AttakArcher(archer& enemy);
     void AttakMage(mage& enemy);
     void AttakSwordsman(swordsman& enemy);

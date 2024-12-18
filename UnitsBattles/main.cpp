@@ -2,11 +2,18 @@
 #include "swordsman.h"
 #include "archer.h"
 #include "mage.h"
+#include"bow.h"
+#include"stick.h"
+#include"sword.h"
 
 int main() {
-    swordsman Swordsman("Swordsman", "Sword", 150, 30, 30);
-    archer Archer("Archer", "Bow", 100, 20, 60);
-    mage Mag("Mag", "Stick", 80, 50, 100);
+    sword Sword("Sword", 10);
+    bow Bow("Bow", 20, 30);
+    stick Posoh("Stick", 30, 5);
+
+    swordsman Swordsman("Swordsman", Sword, 100, 30);
+    archer Archer("Archer", Bow, 100, 20);
+    mage Mag("Mag", Posoh, 100, 50);
 
     std::cout << Swordsman << std::endl;
     std::cout << Archer << std::endl;

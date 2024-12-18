@@ -16,6 +16,7 @@ private:
 	std::string name;
 	unsigned int damage;
 public:
+	weapon();
 	weapon(std::string name, unsigned int damage);
 	weapon(std::string name);
 
