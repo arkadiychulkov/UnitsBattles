@@ -16,6 +16,9 @@ private:
 	std::string name;
 	unsigned int damage;
 public:
+	weapon(std::string name, unsigned int damage);
+	weapon(std::string name);
+
 	unsigned int GetDamage();
 	void UpGreade();
 	Grade GetGrade();

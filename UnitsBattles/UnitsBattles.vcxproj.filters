@@ -9,29 +9,50 @@
       <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
       <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
-    </Filter>
     <Filter Include="Header Files\unit">
       <UniqueIdentifier>{49e101b4-2134-4c2d-85d7-51bd839e773d}</UniqueIdentifier>
     </Filter>
     <Filter Include="Header Files\weapon">
       <UniqueIdentifier>{055e6724-deb8-4725-8429-41c5eec9acb5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\unit">
+      <UniqueIdentifier>{1789b403-7f17-45a3-a2b6-bd4840baf022}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\weapon">
+      <UniqueIdentifier>{a447b12e-acf2-402f-acb0-3bb234bcf992}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Unit.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="archer.cpp">
+      <Filter>Source Files\unit</Filter>
     </ClCompile>
-    <ClCompile Include="weapon.cpp">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="mage.cpp">
+      <Filter>Source Files\unit</Filter>
     </ClCompile>
     <ClCompile Include="swordsman.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Source Files\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="Unit.cpp">
+      <Filter>Source Files\unit</Filter>
+    </ClCompile>
+    <ClCompile Include="bow.cpp">
+      <Filter>Source Files\weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="weapon.cpp">
+      <Filter>Source Files\weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="sword.cpp">
+      <Filter>Source Files\weapon</Filter>
+    </ClCompile>
+    <ClCompile Include="stick.cpp">
+      <Filter>Source Files\weapon</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -43,6 +64,21 @@
     </ClInclude>
     <ClInclude Include="swordsman.h">
       <Filter>Header Files\unit</Filter>
+    </ClInclude>
+    <ClInclude Include="archer.h">
+      <Filter>Header Files\unit</Filter>
+    </ClInclude>
+    <ClInclude Include="mage.h">
+      <Filter>Header Files\unit</Filter>
+    </ClInclude>
+    <ClInclude Include="sword.h">
+      <Filter>Header Files\weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="bow.h">
+      <Filter>Header Files\weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="stick.h">
+      <Filter>Header Files\weapon</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

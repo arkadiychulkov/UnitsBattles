@@ -127,12 +127,22 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="archer.cpp" />
+    <ClCompile Include="bow.cpp" />
+    <ClCompile Include="mage.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="stick.cpp" />
+    <ClCompile Include="sword.cpp" />
     <ClCompile Include="swordsman.cpp" />
     <ClCompile Include="Unit.cpp" />
     <ClCompile Include="weapon.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="archer.h" />
+    <ClInclude Include="bow.h" />
+    <ClInclude Include="mage.h" />
+    <ClInclude Include="stick.h" />
+    <ClInclude Include="sword.h" />
     <ClInclude Include="swordsman.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="weapon.h" />

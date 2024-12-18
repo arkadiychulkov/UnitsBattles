@@ -1,13 +1,38 @@
 #include "weapon.h"
-#include<iostream>
-unsigned int weapon::GetDamage() {
-	return damage;
+weapon::weapon(std::string name, unsigned int damage)
+    : name(name), damage(damage), grade(Common) {
 }
 
-Grade weapon::GetGrade() {
-	return grade;
+weapon::weapon(std::string name)
+    : name(name), damage(10), grade(Common) {
+}
+
+unsigned int weapon::GetDamage() {
+    return damage;
 }
 
 void weapon::UpGreade() {
-	std::cout << this->grade << name << '\n';
+    if (grade = Common) {
+        grade = Rare;
+        damage += 5;
+    }
+    else if (grade = Rare) {
+        grade = Epic;
+        damage += 5;
+    }
+    else if (grade = Epic) {
+        grade = Legendary;
+        damage += 5;
+    }
+    else if (grade = Legendary) {
+        grade = Myphic;
+        damage += 5;
+    }
+    else {
+        damage += 5;
+    }
+}
+ 
+Grade weapon::GetGrade() {
+    return grade;
 }
