@@ -17,4 +17,3 @@ public:
 	void GetDamag(int damag);
 	friend std::ostream& operator<<(std::ostream& os, const Unit& arr);
 };
-
