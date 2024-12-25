@@ -12,6 +12,8 @@ private:
 
 public:
     mage(std::string name, stick weap, int hp, unsigned int mana);
+
+    void Attak(Unit& enemy) override;
     void AttakArcher(archer& enemy);
     void AttakMage(mage& enemy);
     void AttakSwordsman(swordsman& enemy);

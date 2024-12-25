@@ -5,7 +5,7 @@
 
 mage::mage(std::string name, stick weap, int hp, unsigned int mana) : Unit(name, hp), mana(mana) {}
 
-void mage::AttakArcher(archer& enemy) {
+void mage::Attak(Unit& enemy) {
     if (mana >= 10) {
         mana -= 10;
         enemy.GetDamag(weaponn.GetDamage());
@@ -14,28 +14,18 @@ void mage::AttakArcher(archer& enemy) {
     else {
         std::cout << name << " no arrows.\n";
     }
+}
+
+void mage::AttakArcher(archer& enemy) {
+    Attak(enemy);
 }
 
 void mage::AttakMage(mage& enemy) {
-    if (mana >= 10) {
-        mana -= 10;
-        enemy.GetDamag(weaponn.GetDamage());
-        std::cout << name << " shoots at archer " << "\n";
-    }
-    else {
-        std::cout << name << " no arrows.\n";
-    }
+    Attak(enemy);
 }
 
 void mage::AttakSwordsman(swordsman& enemy) {
-    if (mana >= 10) {
-        mana -= 10;
-        enemy.GetDamag(weaponn.GetDamage());
-        std::cout << name << " shoots at archer " << "\n";
-    }
-    else {
-        std::cout << name << " no arrows.\n";
-    }
+    Attak(enemy);
 }
 
 void mage::Defence() {

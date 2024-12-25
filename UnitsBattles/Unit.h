@@ -6,14 +6,15 @@ class Unit
 {
 protected:
 	weapon weaponn;
-	int hp, speed;
+	int speed;
+	unsigned int hp;
 	std::string name;
 	bool IsInDefenceó;
 public:
 	Unit(std::string name, int hp);
 	 
-	void Attak(Unit& enemy);
-	void Defence();
+	virtual void Attak(Unit& enemy);
+	virtual void Defence();
 	void GetDamag(int damag);
 	friend std::ostream& operator<<(std::ostream& os, const Unit& arr);
 };

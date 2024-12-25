@@ -5,12 +5,12 @@
 
 archer::archer(std::string name, bow weap, int hp, unsigned int arrows) : Unit(name, hp), arrows(arrows) {}
 
-void archer::AttakArcher(archer& enemy) {
+void archer::Attak(Unit& enemy) {
     if (!IsInDefenceó) {
         if (arrows > 0) {
             --arrows;
             enemy.GetDamag(weaponn.GetDamage());
-            std::cout << name << " shoots at archer " << enemy.name << "!\n";
+            std::cout << name << " shoots at archer " << "!\n";
         }
         else {
             std::cout << name << " no arrows.\n";
@@ -19,38 +19,18 @@ void archer::AttakArcher(archer& enemy) {
     else {
         std::cout << name << "InDefence\n";
     }
+}
+
+void archer::AttakArcher(archer& enemy) {
+    Attak(enemy);
 }
 
 void archer::AttakMage(mage& enemy) {
-    if (!IsInDefenceó) {
-        if (arrows > 0) {
-            --arrows;
-            enemy.GetDamag(weaponn.GetDamage());
-            std::cout << name << " shoots at archer " << "!\n";
-        }
-        else {
-            std::cout << name << " no arrows.\n";
-        }
-    }
-    else {
-        std::cout << name << "InDefence\n";
-    }
+    Attak(enemy);
 }
 
 void archer::AttakSwordsman(swordsman& enemy) {
-    if (!IsInDefenceó) {
-        if (arrows > 0) {
-            --arrows;
-            enemy.GetDamag(weaponn.GetDamage());
-            std::cout << name << " shoots at archer " << "!\n";
-        }
-        else {
-            std::cout << name << " no arrows.\n";
-        }
-    }
-    else {
-        std::cout << name << "InDefence\n";
-    }
+    Attak(enemy);
 }
 
 void archer::Defence() {

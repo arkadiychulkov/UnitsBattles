@@ -7,34 +7,26 @@
 swordsman::swordsman(std::string name, sword weap, int hp, unsigned int pow) : Unit(name, hp), pow(pow) {
 }
 
-void swordsman::AttakArcher(archer& enemy) {
+void swordsman::Attak(Unit& enemy) {
     if (!IsInDefenceó) {
         enemy.GetDamag(weaponn.GetDamage());
-        std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage()+pow) << "\n";
+        std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage() + pow) << "\n";
     }
     else {
         std::cout << name << "InDefence\n";
     }
+}
+
+void swordsman::AttakArcher(archer& enemy) {
+    Attak(enemy);
 }
 
 void swordsman::AttakMage(mage& enemy) {
-    if (!IsInDefenceó) {
-        enemy.GetDamag(weaponn.GetDamage());
-        std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage() + pow) << "\n";
-    }
-    else {
-        std::cout << name << "InDefence\n";
-    }
+    Attak(enemy);
 }
 
 void swordsman::AttakSwordsman(swordsman& enemy) {
-    if (!IsInDefenceó) {
-        enemy.GetDamag(weaponn.GetDamage());
-        std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage() + pow) << "\n";
-    }
-    else {
-        std::cout << name << "InDefence\n";
-    }
+    Attak(enemy);
 }
 
 void swordsman::Defence() {
