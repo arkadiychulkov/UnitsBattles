@@ -15,6 +15,6 @@ public:
 	 
 	virtual void Attak(Unit& enemy);
 	virtual void Defence();
-	void GetDamag(int damag);
+	void GetDamag(int damag);//TakeDamag
 	friend std::ostream& operator<<(std::ostream& os, const Unit& arr);
 };

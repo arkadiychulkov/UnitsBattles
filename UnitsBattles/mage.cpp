@@ -6,14 +6,19 @@
 mage::mage(std::string name, stick weap, int hp, unsigned int mana) : Unit(name, hp), mana(mana) {}
 
 void mage::Attak(Unit& enemy) {
-    if (mana >= 10) {
-        mana -= 10;
-        enemy.GetDamag(weaponn.GetDamage());
-        std::cout << name << " shoots at archer " << "\n";
+    if (!IsInDefenceó)
+    {
+        if (mana >= 10) {
+            mana -= 10;
+            enemy.GetDamag(weaponn.GetDamage());
+            std::cout << name << " shoots at archer " << "\n";
+        }
+        else {
+            std::cout << name << " no arrows.\n";
+        }
     }
-    else {
-        std::cout << name << " no arrows.\n";
-    }
+    else
+        std::cout << "In Defence";
 }
 
 void mage::AttakArcher(archer& enemy) {
