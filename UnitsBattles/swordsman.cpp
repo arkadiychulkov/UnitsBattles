@@ -9,7 +9,7 @@ swordsman::swordsman(std::string name, sword weap, int hp, unsigned int pow) : U
 
 void swordsman::Attak(Unit& enemy) {
     if (!IsInDefenceó) {
-        enemy.GetDamag(weaponn.GetDamage());
+        enemy.GetDamag(weaponn.GetDamage() + pow);
         std::cout << name << " atacks " << " damage is " << (weaponn.GetDamage() + pow) << "\n";
     }
     else {

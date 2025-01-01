@@ -20,12 +20,12 @@ int main() {
     std::cout << Mag << std::endl;
 
     std::cout << "\n--- Attak ---\n";
-    Swordsman.AttakArcher(Archer);
+    Swordsman.Attak(Archer);
     Archer.Defence();
-    Mag.AttakSwordsman(Swordsman);
+    Mag.Attak(Swordsman);
 
     Swordsman.Defence();
-    Archer.AttakMage(Mag);
+    Archer.Attak(Mag);
 
     std::cout << "\n--- After War ---\n";
     std::cout << Swordsman << std::endl;
