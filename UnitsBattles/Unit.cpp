@@ -4,9 +4,30 @@
 Unit::Unit(std::string name, int hp) : name(name), hp(hp), speed(0), IsInDefenceó(false) {
 }
 
+int Unit::ReturnDamagByGrade(Grade gd) {
+    int cof = 0;
+    if (weaponn.GetDamage() == Common) {
+        cof = 1;
+    }
+    else if (weaponn.GetDamage() == Rare) {
+        cof = 2;
+    }
+    else if (weaponn.GetDamage() == Epic) {
+        cof = 3;
+    }
+    else if (weaponn.GetDamage() == Legendary) {
+        cof = 5;
+    }
+    return weaponn.GetUron() * cof;
+}
+
+bool Unit::GetDef() {
+    return IsInDefenceó;
+}
+
 void Unit::Attak(Unit& enemy) {
     if (!IsInDefenceó) {
-        enemy.hp -= weaponn.GetDamage();
+        enemy.hp -= ReturnDamagByGrade(weaponn.GetDamage());
         std::cout << name << " atacks " << enemy.name << " damage is " << weaponn.GetDamage() << "\n";
     }
     else {

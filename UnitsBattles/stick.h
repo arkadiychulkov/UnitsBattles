@@ -9,5 +9,6 @@ public:
 
 	Grade GetDamage();
 	void Upgrade();
+	void AddCharges(int);
 };
 

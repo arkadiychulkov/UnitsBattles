@@ -4,9 +4,27 @@
 sword::sword(std::string name, unsigned int damage) : weapon(name, damage) {}
 
 Grade sword::GetDamage() {
-    return this->GetGrade();
+    return grade;
 }
 
 void sword::Upgrade() {
-    this->UpGreade();
+    if (grade = Common) {
+        grade = Rare;
+        damage += 5;
+    }
+    else if (grade = Rare) {
+        grade = Epic;
+        damage += 5;
+    }
+    else if (grade = Epic) {
+        grade = Legendary;
+        damage += 5;
+    }
+    else if (grade = Legendary) {
+        grade = Myphic;
+        damage += 5;
+    }
+    else {
+        damage += 5;
+    }
 }

@@ -11,7 +11,7 @@ enum Grade {
 
 class weapon
 {
-private:
+protected:
 	Grade grade;
 	std::string name;
 	unsigned int damage;
@@ -20,8 +20,8 @@ public:
 	weapon(std::string name, unsigned int damage);
 	weapon(std::string name);
 
-	unsigned int GetDamage();
-	void UpGreade();
-	Grade GetGrade();
+	Grade GetDamage();
+	virtual void UpGreade();
+	int GetUron();//он нужен
 };
 

@@ -11,9 +11,9 @@ int main() {
     bow Bow("Bow", 20, 30);
     stick Posoh("Stick", 30, 5);
 
-    swordsman Swordsman("Swordsman", Sword, 100, 30);
-    archer Archer("Archer", Bow, 100, 20);
-    mage Mag("Mag", Posoh, 100, 50);
+    swordsman Swordsman("Swordsman", Sword, 200, 30);
+    archer Archer("Archer", Bow, 200, 20);
+    mage Mag("Mag", Posoh, 200, 50);
 
     std::cout << Swordsman << std::endl;
     std::cout << Archer << std::endl;
@@ -21,10 +21,27 @@ int main() {
 
     std::cout << "\n--- Attak ---\n";
     Swordsman.Attak(Archer);
-    Archer.Defence();
     Mag.Attak(Swordsman);
+    Archer.Attak(Mag);
+    std::cout << '\n';
 
     Swordsman.Defence();
+    Archer.Defence();
+    Mag.Defence();
+    std::cout << '\n';
+
+    Swordsman.Attak(Archer);
+    Mag.Attak(Swordsman);
+    Archer.Attak(Mag);
+    std::cout << '\n';
+
+    Swordsman.Defence();
+    Archer.Defence();
+    Mag.Defence();
+    std::cout << '\n';
+
+    Swordsman.Attak(Archer);
+    Mag.Attak(Swordsman);
     Archer.Attak(Mag);
 
     std::cout << "\n--- After War ---\n";

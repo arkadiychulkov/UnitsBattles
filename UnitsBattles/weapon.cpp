@@ -11,7 +11,11 @@ weapon::weapon(std::string name)
     : name(name), damage(10), grade(Common) {
 }
 
-unsigned int weapon::GetDamage() {
+Grade weapon::GetDamage() {
+    return grade;
+}
+
+int weapon::GetUron() {
     return damage;
 }
 
@@ -35,8 +39,4 @@ void weapon::UpGreade() {
     else {
         damage += 5;
     }
-}
- 
-Grade weapon::GetGrade() {
-    return grade;
 }

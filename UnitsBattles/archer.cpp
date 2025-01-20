@@ -7,13 +7,20 @@ archer::archer(std::string name, bow weap, int hp, unsigned int arrows) : Unit(n
 
 void archer::Attak(Unit& enemy) {
     if (!IsInDefenceó) {
-        if (arrows > 0) {
-            --arrows;
-            enemy.GetDamag(weaponn.GetDamage());
-            std::cout << name << " shoots at archer " << "!\n";
+        if (!enemy.GetDef())
+        {
+            if (arrows > 0) {
+                --arrows;
+                enemy.GetDamag(ReturnDamagByGrade(weaponn.GetDamage()));
+                std::cout << name << "Archer atacks " << " damage is " << (ReturnDamagByGrade(weaponn.GetDamage())) << "\n";
+            }
+            else {
+                std::cout << name << " no arrows.\n";
+            }
         }
-        else {
-            std::cout << name << " no arrows.\n";
+        else
+        {
+            std::cout << "in defence enemy";
         }
     }
     else {
@@ -21,19 +28,9 @@ void archer::Attak(Unit& enemy) {
     }
 }
 
-void archer::AttakArcher(archer& enemy) {
-    Attak(enemy);
-}
-
-void archer::AttakMage(mage& enemy) {
-    Attak(enemy);
-}
-
-void archer::AttakSwordsman(swordsman& enemy) {
-    Attak(enemy);
-}
-
 void archer::Defence() {
     IsInDefenceó = !IsInDefenceó;
+    weaponn.UpGreade();
     std::cout << name << "Defence \n";
+    arrows++;
 }
