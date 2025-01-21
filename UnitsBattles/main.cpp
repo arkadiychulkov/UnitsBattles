@@ -6,14 +6,15 @@
 #include"stick.h"
 #include"sword.h"
 
-int main() {
-    sword Sword("Sword", 10);
-    bow Bow("Bow", 20, 30);
-    stick Posoh("Stick", 30, 5);
 
-    swordsman Swordsman("Swordsman", Sword, 200, 30);
-    archer Archer("Archer", Bow, 200, 20);
-    mage Mag("Mag", Posoh, 200, 50);
+int main() {
+    WeaponSpace::sword Sword("Sword", 10);
+    WeaponSpace::bow Bow("Bow", 20, 30);
+    WeaponSpace::stick Posoh("Stick", 30, 5);
+
+    UnintSpace::swordsman Swordsman("Swordsman", Sword, 200, 30);
+    UnintSpace::archer Archer("Archer", Bow, 200, 20);
+    UnintSpace::mage Mag("Mag", Posoh, 200, 50);
 
     std::cout << Swordsman << std::endl;
     std::cout << Archer << std::endl;
