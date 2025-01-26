@@ -54,6 +54,9 @@
     <ClCompile Include="stick.cpp">
       <Filter>Source Files\weapon</Filter>
     </ClCompile>
+    <ClCompile Include="team.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Unit.h">
@@ -79,6 +82,9 @@
     </ClInclude>
     <ClInclude Include="stick.h">
       <Filter>Header Files\weapon</Filter>
+    </ClInclude>
+    <ClInclude Include="team.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

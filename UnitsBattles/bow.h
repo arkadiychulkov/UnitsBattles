@@ -7,7 +7,7 @@ namespace WeaponSpace {
 	private:
 		int maxDamage;
 	public:
-		bow(std::string name, unsigned int damage, int maxda);
+		bow(std::string name, int range, int damage);
 
 		Grade GetDamage();
 		void Upgrade();

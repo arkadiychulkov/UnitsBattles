@@ -4,7 +4,7 @@
 #include "bow.h"
 
 namespace UnintSpace {
-    archer::archer(std::string name, WeaponSpace::bow weap, int hp, unsigned int arrows) : Unit(name, hp), arrows(arrows) {}
+    archer::archer(std::string name, const WeaponSpace::weapon& weapon, int health, int agility) : Unit(name, health, weapon), arrows(agility) {}
 
     void archer::Attak(Unit& enemy) {
         if (!IsInDefenceó) {
@@ -14,6 +14,11 @@ namespace UnintSpace {
                     --arrows;
                     enemy.GetDamag(ReturnDamagByGrade(weaponn.GetDamage()));
                     std::cout << name << "Archer atacks " << " damage is " << (ReturnDamagByGrade(weaponn.GetDamage())) << "\n";
+                    if (enemy.IsDead())
+                    {
+                        arrows += 5;
+                        std::cout << "Enemy is dead";
+                    }
                 }
                 else {
                     std::cout << name << " no arrows.\n";

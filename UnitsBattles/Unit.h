@@ -9,21 +9,24 @@ namespace UnintSpace {
 	protected:
 		WeaponSpace::weapon weaponn;
 		int speed;
-		unsigned int hp;
+		int hp;
 		std::string name;
 		bool IsInDefenceу;
 	public:
 		Unit(std::string name, int hp);
+		Unit(std::string name, int hp, WeaponSpace::weapon weapon);
 
 		virtual void Attak(Unit& enemy);
-		virtual void Defence();
+		virtual void Defence() = 0;
 
 		bool GetDef();
+		bool IsDead();
 
-		void GetDamag(int damag);//TakeDamag
+		int GetDamag(int damag);//TakeDamag
 
-		int ReturnDamagByGrade(WeaponSpace::Grade grade);//я не понимаю почему гет демедж в оружие возвращает греид поэтому буду делать так
+		int ReturnDamagByGrade(WeaponSpace::Grade grade);
 
 		friend std::ostream& operator<<(std::ostream& os, const Unit& arr);
 	};
 }
+//'UnintSpace::Unit': cannot instantiate abstract class

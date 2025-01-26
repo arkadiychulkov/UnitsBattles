@@ -5,6 +5,9 @@ namespace UnintSpace {
     Unit::Unit(std::string name, int hp) : name(name), hp(hp), speed(0), IsInDefenceó(false) {
     }
 
+    Unit::Unit(std::string name, int hp, WeaponSpace::weapon weap) : name(name), hp(hp), speed(0), IsInDefenceó(false), weaponn(weap) {
+    }
+
     int Unit::ReturnDamagByGrade(WeaponSpace::Grade gd) {
         int cof = 0;
         if (weaponn.GetDamage() == WeaponSpace::Common) {
@@ -28,7 +31,7 @@ namespace UnintSpace {
 
     void Unit::Attak(Unit& enemy) {
         if (!IsInDefenceó) {
-            enemy.hp -= ReturnDamagByGrade(weaponn.GetDamage());
+            enemy.GetDamag(ReturnDamagByGrade(weaponn.GetDamage()));
             std::cout << name << " atacks " << enemy.name << " damage is " << weaponn.GetDamage() << "\n";
         }
         else {
@@ -41,9 +44,15 @@ namespace UnintSpace {
         std::cout << name << "Defence or Undefence\n";
     }
 
-    void Unit::GetDamag(int damag) {
-        this->hp -= damag;
+    int Unit::GetDamag(int damag) {
+        int trud = hp - damag;
+        this->hp -= trud < 0 ? 0 : trud;
         std::cout << name << "Ouch!\n";
+        return trud;
+    }
+
+    bool Unit::IsDead() {
+        return hp <= 0;
     }
 
     std::ostream& operator<<(std::ostream& os, const Unit& unit) {

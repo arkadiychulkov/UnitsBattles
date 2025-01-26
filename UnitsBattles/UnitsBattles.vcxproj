@@ -134,6 +134,7 @@
     <ClCompile Include="stick.cpp" />
     <ClCompile Include="sword.cpp" />
     <ClCompile Include="swordsman.cpp" />
+    <ClCompile Include="team.cpp" />
     <ClCompile Include="Unit.cpp" />
     <ClCompile Include="weapon.cpp" />
   </ItemGroup>
@@ -144,6 +145,7 @@
     <ClInclude Include="stick.h" />
     <ClInclude Include="sword.h" />
     <ClInclude Include="swordsman.h" />
+    <ClInclude Include="team.h" />
     <ClInclude Include="Unit.h" />
     <ClInclude Include="weapon.h" />
   </ItemGroup>

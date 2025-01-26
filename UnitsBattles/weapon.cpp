@@ -1,7 +1,7 @@
 #include "weapon.h"
 
 namespace WeaponSpace {
-    weapon::weapon(std::string name, unsigned int damage)
+    weapon::weapon(std::string name, int damage)
         : name(name), damage(damage), grade(Common) {
     }
 

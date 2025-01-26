@@ -2,7 +2,7 @@
 #include"weapon.h"
 
 namespace WeaponSpace {
-	class stick : weapon
+	class stick : public weapon
 	{
 	private:
 		int charges;
@@ -11,6 +11,6 @@ namespace WeaponSpace {
 
 		Grade GetDamage();
 		void Upgrade();
-		void AddCharges(int);
+		void AddCharges(int a);
 	};
 }

@@ -2,7 +2,7 @@
 #include "weapon.h"
 
 namespace WeaponSpace {
-    bow::bow(std::string name, unsigned int damage, int maxda) : weapon(name, damage), maxDamage(maxda) {}
+    bow::bow(std::string name, int damage, int maxda) : weapon(name, damage), maxDamage(maxda) {}
 
     Grade bow::GetDamage() {
         return grade;

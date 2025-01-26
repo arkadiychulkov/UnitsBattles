@@ -2,7 +2,7 @@
 #include "weapon.h"
 
 namespace WeaponSpace {
-	class sword : weapon
+	class sword : public weapon
 	{
 	public:
 		sword(std::string name, unsigned int damage);

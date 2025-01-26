@@ -6,15 +6,25 @@
 
 namespace UnintSpace {
 
-    swordsman::swordsman(std::string name, WeaponSpace::sword weap, int hp, unsigned int pow) : Unit(name, hp), pow(pow) {
+    swordsman::swordsman(std::string name, WeaponSpace::weapon weap, int hp, unsigned int pow) : Unit(name, hp, weap), pow(pow) {
+    }
+
+    WeaponSpace::sword weap("stic", 10);
+    swordsman::swordsman() : Unit("name", 200, weap), pow(10) {
     }
 
     void swordsman::Attak(Unit& enemy) {
         if (!IsInDefenceó) {
             if (!enemy.GetDef())
             {
+                int a = ReturnDamagByGrade(weaponn.GetDamage()) + pow;
                 enemy.GetDamag(ReturnDamagByGrade(weaponn.GetDamage()) + pow);
                 std::cout << name << "Swordsman atacks " << " damage is " << (ReturnDamagByGrade(weaponn.GetDamage()) + pow) << "\n";
+                if (enemy.IsDead())
+                {
+                    hp += 10;
+                    std::cout << "Enemy is dead";
+                }
             }
         }
         else {
