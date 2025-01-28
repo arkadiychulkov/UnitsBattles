@@ -46,8 +46,8 @@ namespace UnintSpace {
 
     int Unit::GetDamag(int damag) {
         int trud = hp - damag;
-        this->hp -= trud < 0 ? 0 : trud;
-        std::cout << name << "Ouch!\n";
+        this->hp -= damag;
+        std::cout << name << hp << "Ouch!\n";
         return trud;
     }
 

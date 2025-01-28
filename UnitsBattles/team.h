@@ -9,6 +9,7 @@ private:
     std::vector<Unit*> units;
     static bool isFirst;
     std::string name;
+    bool haveatakted = false;
 public:
     team();
     //team(const std::initializer_list<Unit*>& list);
@@ -18,4 +19,8 @@ public:
     bool isDead();
     Unit& GetTarget(team& trgs);
     std::string& GetName();
+    void show();
+    void ResetAfterBattle();
+    int Size();
+    int Alive();
 };

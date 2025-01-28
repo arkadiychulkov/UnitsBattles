@@ -4,7 +4,7 @@
 #include "bow.h"
 
 namespace UnintSpace {
-    archer::archer(std::string name, const WeaponSpace::weapon& weapon, int health, int agility) : Unit(name, health, weapon), arrows(agility) {}
+    archer::archer(std::string name, WeaponSpace::weapon weap, int hp, int agility) : Unit(name, hp, weap), arrows(agility) {}
 
     void archer::Attak(Unit& enemy) {
         if (!IsInDefenceó) {

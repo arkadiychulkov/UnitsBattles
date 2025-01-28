@@ -11,7 +11,7 @@ namespace UnintSpace {
         unsigned int arrows;
 
     public:
-        archer(std::string name, const WeaponSpace::weapon& weapon, int health, int agility);
+        archer(std::string name, WeaponSpace::weapon weap, int hp, int agility);
 
         void Attak(Unit& enemy) override;
         void Defence();

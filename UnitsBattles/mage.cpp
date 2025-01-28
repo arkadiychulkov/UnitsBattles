@@ -24,7 +24,7 @@ namespace UnintSpace {
                     }
                 }
                 else {
-                    std::cout << name << " no arrows.\n";
+                    std::cout << name << " no mana.\n";
                 }
             }
         }

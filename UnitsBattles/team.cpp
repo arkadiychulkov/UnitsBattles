@@ -23,6 +23,12 @@ team::team() {
     }
 }
 
+void team::show() {
+    for (size_t i = 0; i < units.size(); i++) {
+        std::cout << *units[i];
+    }
+}
+
 //team::team(const std::initializer_list<Unit*>& list) {
 //    for (auto unit : list) {
 //        units.push_back(unit);
@@ -58,4 +64,19 @@ bool team::isDead() {
         }
     }
     return true;
+}
+
+int team::Size() {
+    return units.size();
+}
+
+int team::Alive() {
+    int count = 0;
+    for (size_t i = 0; i < units.size(); i++)
+    {
+        if (!units[i]->IsDead()) {
+            count++;
+        }
+    }
+    return count;
 }

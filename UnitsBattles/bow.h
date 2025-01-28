@@ -2,7 +2,7 @@
 #include"weapon.h"
 
 namespace WeaponSpace {
-	class bow : weapon
+	class bow : public weapon
 	{
 	private:
 		int maxDamage;
