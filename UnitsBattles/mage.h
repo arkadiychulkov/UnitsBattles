@@ -12,7 +12,7 @@ namespace UnintSpace {
         unsigned int mana;
 
     public:
-        mage(std::string name, WeaponSpace::weapon weap, int hp, unsigned int mana);
+        mage(std::string name, WeaponSpace::stick& weap, int hp, unsigned int mana);
         mage();
 
         void Attak(Unit& enemy) override;

@@ -7,14 +7,14 @@ namespace UnintSpace {
 	class Unit
 	{
 	protected:
-		WeaponSpace::weapon weaponn;
+		WeaponSpace::weapon* weaponn;
 		int speed;
 		int hp;
 		std::string name;
 		bool IsInDefenceó;
 	public:
 		Unit(std::string name, int hp);
-		Unit(std::string name, int hp, WeaponSpace::weapon weapon);
+		Unit(std::string name, int hp, WeaponSpace::weapon& weapon);
 
 		virtual void Attak(Unit& enemy);
 		virtual void Defence() = 0;

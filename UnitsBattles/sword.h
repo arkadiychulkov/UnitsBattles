@@ -8,6 +8,6 @@ namespace WeaponSpace {
 		sword(std::string name, unsigned int damage);
 
 		Grade GetDamage();
-		void Upgrade();
+		void Upgrade() override;
 	};
 }

@@ -21,7 +21,7 @@ namespace WeaponSpace {
         return damage;
     }
 
-    void weapon::UpGreade() {
+    void weapon::Upgrade() {
         if (grade = Common) {
             grade = Rare;
             damage += 5;

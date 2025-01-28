@@ -11,7 +11,7 @@ namespace UnintSpace {
         unsigned int pow;
 
     public:
-        swordsman(std::string name, WeaponSpace::weapon weap, int hp, unsigned int pow);
+        swordsman(std::string name, WeaponSpace::sword& weap, int hp, unsigned int pow);
         swordsman();
 
         void Attak(Unit& enemy) override;

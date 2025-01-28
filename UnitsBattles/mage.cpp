@@ -4,7 +4,7 @@
 #include "stick.h"
 
 namespace UnintSpace {
-    mage::mage(std::string name, WeaponSpace::weapon weap, int hp, unsigned int mana) : Unit(name, hp, weap), mana(mana) {}
+    mage::mage(std::string name, WeaponSpace::stick& weap, int hp, unsigned int mana) : Unit(name, hp, weap), mana(mana) {}
 
     WeaponSpace::stick weap("stic", 10, 10);
     mage::mage() : Unit("Mage", 200, weap), mana(100) {}
@@ -15,8 +15,8 @@ namespace UnintSpace {
             if (!enemy.GetDef()) {
                 if (mana >= 10) {
                     mana -= 10;
-                    enemy.GetDamag(ReturnDamagByGrade(weaponn.GetDamage()));
-                    std::cout << name << "Mage atacks " << " damage is " << (ReturnDamagByGrade(weaponn.GetDamage())) << "\n";
+                    enemy.GetDamag(ReturnDamagByGrade(weaponn->GetDamage()));
+                    std::cout << name << "Mage atacks " << " damage is " << (ReturnDamagByGrade(weaponn->GetDamage())) << "\n";
                     if (enemy.IsDead())
                     {
                         mana += 25;
@@ -34,7 +34,7 @@ namespace UnintSpace {
 
     void mage::Defence() {
         IsInDefenceó = !IsInDefenceó;
-        weaponn.UpGreade();
+        weaponn->Upgrade();
         std::cout << name << "Defence or Undefence\n";
     }
 }

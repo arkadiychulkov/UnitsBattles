@@ -22,7 +22,7 @@ namespace WeaponSpace {
 		weapon(std::string name);
 
 		Grade GetDamage();
-		virtual void UpGreade();
+		virtual void Upgrade() = 0;
 		int GetUron();//он нужен
 	};
 }

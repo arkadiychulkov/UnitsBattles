@@ -5,24 +5,24 @@ namespace UnintSpace {
     Unit::Unit(std::string name, int hp) : name(name), hp(hp), speed(0), IsInDefenceó(false) {
     }
 
-    Unit::Unit(std::string name, int hp, WeaponSpace::weapon weap) : name(name), hp(hp), speed(0), IsInDefenceó(false), weaponn(weap) {
+    Unit::Unit(std::string name, int hp, WeaponSpace::weapon& weap) : name(name), hp(hp), speed(0), IsInDefenceó(false), weaponn(&weap) {
     }
 
     int Unit::ReturnDamagByGrade(WeaponSpace::Grade gd) {
         int cof = 0;
-        if (weaponn.GetDamage() == WeaponSpace::Common) {
+        if (weaponn->GetDamage() == WeaponSpace::Common) {
             cof = 1;
         }
-        else if (weaponn.GetDamage() == WeaponSpace::Rare) {
+        else if (weaponn->GetDamage() == WeaponSpace::Rare) {
             cof = 2;
         }
-        else if (weaponn.GetDamage() == WeaponSpace::Epic) {
+        else if (weaponn->GetDamage() == WeaponSpace::Epic) {
             cof = 3;
         }
-        else if (weaponn.GetDamage() == WeaponSpace::Legendary) {
+        else if (weaponn->GetDamage() == WeaponSpace::Legendary) {
             cof = 5;
         }
-        return weaponn.GetUron() * cof;
+        return weaponn->GetUron() * cof;
     }
 
     bool Unit::GetDef() {
@@ -31,8 +31,8 @@ namespace UnintSpace {
 
     void Unit::Attak(Unit& enemy) {
         if (!IsInDefenceó) {
-            enemy.GetDamag(ReturnDamagByGrade(weaponn.GetDamage()));
-            std::cout << name << " atacks " << enemy.name << " damage is " << weaponn.GetDamage() << "\n";
+            enemy.GetDamag(ReturnDamagByGrade(weaponn->GetDamage()));
+            std::cout << name << " atacks " << enemy.name << " damage is " << weaponn->GetDamage() << "\n";
         }
         else {
             std::cout << name << "InDefence\n";
