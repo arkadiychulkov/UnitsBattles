@@ -17,22 +17,22 @@ namespace WeaponSpace {
         if (grade = Common) {
             grade = Rare;
             damage += 5;
-            charges++;
+            charges += 2;
         }
         else if (grade = Rare) {
             grade = Epic;
             damage += 6;
-            charges++;
+            charges += 3;
         }
         else if (grade = Epic) {
             grade = Legendary;
             damage += 4;
-            charges++;
+            charges += 3;
         }
         else if (grade = Legendary) {
             grade = Myphic;
             damage += 10;
-            charges++;
+            charges += 6;
         }
         else {
             damage += 5;
