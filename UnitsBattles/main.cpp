@@ -9,7 +9,7 @@
 
 
 int main() {
-    WeaponSpace::sword Sword("Sword", 5);
+    /*WeaponSpace::sword Sword("Sword", 5);
     WeaponSpace::bow Bow("Bow", 20, 30);
     WeaponSpace::stick Posoh("Stick", 30, 5);
 
@@ -49,52 +49,52 @@ int main() {
     std::cout << "\n--- After War ---\n";
     std::cout << Swordsman << std::endl;
     std::cout << Archer << std::endl;
-    std::cout << Mag << std::endl;
+    std::cout << Mag << std::endl;*/
 
-    //WeaponSpace::sword Sword("Sword", 100);
-    //WeaponSpace::stick Posoh("Stick", 30, 5);
+    WeaponSpace::sword Sword("Sword", 100);
+    WeaponSpace::stick Posoh("Stick", 30, 5);
 
-    //UnintSpace::swordsman Swordsman1("Swordsman1", Sword, 200, 30);
-    //UnintSpace::swordsman Swordsman2("Swordsman2", Sword, 200, 30);
-    //UnintSpace::swordsman Swordsman3("Swordsman3", Sword, 200, 30);
-    //UnintSpace::mage Mag1("Mag1", Posoh, 19, 50);
-    //UnintSpace::mage Mag2("Mag2", Posoh, 19, 50);
-    //UnintSpace::mage Mag3("Mag3", Posoh, 19, 50);
-
-
-    //team team1;
-    //team1.SetName("first");
-    //team1.Append(&Swordsman1);
-    //team1.Append(&Swordsman2);
-    //team1.Append(&Swordsman3);
-    //team1.show();
+    UnintSpace::swordsman Swordsman1("Swordsman1", Sword, 200, 30);
+    UnintSpace::swordsman Swordsman2("Swordsman2", Sword, 200, 30);
+    UnintSpace::swordsman Swordsman3("Swordsman3", Sword, 200, 30);
+    UnintSpace::mage Mag1("Mag1", Posoh, 19, 50);
+    UnintSpace::mage Mag2("Mag2", Posoh, 19, 50);
+    UnintSpace::mage Mag3("Mag3", Posoh, 19, 50);
 
 
-    //team team2;
-    //team2.Append(&Mag1);
-    //team2.Append(&Mag2);
-    //team2.Append(&Mag3);
-    //team2.SetName("second");
-    //
-    //do
-    //{
-    //    std::cout << "Team: " << team1.GetName() << "turn\n";
-    //    team1.Attack(team2);
-    //    team1.show();
-    //    if (team2.isDead())
-    //    {
-    //        std::cout << "Team: " << team1.GetName() << "win!\n";
-    //        break;
-    //    }
-    //    std::cout << "Team: " << team2.GetName() << "Turn\n";
-    //    team2.Attack(team1);
-    //    team2.show();
-    //    if (team1.isDead())
-    //    {
-    //        std::cout << "Team: " << team2.GetName() << "win!\n";
-    //        break;
-    //    }
-    //} while (true);
+    team team1;
+    team1.SetName("first");
+    team1.Append(&Swordsman1);
+    team1.Append(&Swordsman2);
+    team1.Append(&Swordsman3);
+    team1.show();
+
+
+    team team2;
+    team2.Append(&Mag1);
+    team2.Append(&Mag2);
+    team2.Append(&Mag3);
+    team2.SetName("second");
+    
+    do
+    {
+        std::cout << "Team: " << team1.GetName() << "turn\n";
+        team1.Attack(team2);
+        team1.show();
+        if (team2.isDead())
+        {
+            std::cout << "Team: " << team1.GetName() << "win!\n";
+            break;
+        }
+        std::cout << "Team: " << team2.GetName() << "Turn\n";
+        team2.Attack(team1);
+        team2.show();
+        if (team1.isDead())
+        {
+            std::cout << "Team: " << team2.GetName() << "win!\n";
+            break;
+        }
+    } while (true);
 
     return 0;
 }

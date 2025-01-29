@@ -16,7 +16,7 @@ namespace UnintSpace {
 		Unit(std::string name, int hp);
 		Unit(std::string name, int hp, WeaponSpace::weapon& weapon);
 
-		virtual void Attak(Unit& enemy);
+		virtual void Attak(Unit& enemy) = 0;
 		virtual void Defence() = 0;
 
 		bool GetDef();
