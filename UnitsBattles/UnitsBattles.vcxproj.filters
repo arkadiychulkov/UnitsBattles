@@ -87,10 +87,13 @@
       <Filter>Header Files\weapon</Filter>
     </ClInclude>
     <ClInclude Include="team.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\unit</Filter>
     </ClInclude>
     <ClInclude Include="Battle.h">
-      <Filter>Header Files</Filter>
+      <Filter>Header Files\unit</Filter>
+    </ClInclude>
+    <ClInclude Include="ISerializable.h">
+      <Filter>Header Files\unit</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

@@ -143,6 +143,7 @@
     <ClInclude Include="archer.h" />
     <ClInclude Include="Battle.h" />
     <ClInclude Include="bow.h" />
+    <ClInclude Include="ISerializable.h" />
     <ClInclude Include="mage.h" />
     <ClInclude Include="stick.h" />
     <ClInclude Include="sword.h" />
