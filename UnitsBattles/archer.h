@@ -13,6 +13,7 @@ namespace UnintSpace {
     public:
         archer(std::string name, WeaponSpace::weapon& weap, int hp, int agility);
 
+        int GetDamag(int damag) override;
         void Attak(Unit& enemy) override;
         void Defence();
     };

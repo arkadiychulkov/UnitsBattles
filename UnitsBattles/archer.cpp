@@ -40,4 +40,11 @@ namespace UnintSpace {
         std::cout << name << "Defence \n";
         arrows++;
     }
+
+    int archer::GetDamag(int damag) {
+        int trud = hp - damag;
+        this->hp -= damag;
+        std::cout << name << hp << "Ouch!\n";
+        return trud;
+    }
 }

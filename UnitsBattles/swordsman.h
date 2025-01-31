@@ -14,6 +14,7 @@ namespace UnintSpace {
         swordsman(std::string name, WeaponSpace::sword& weap, int hp, unsigned int pow);
         swordsman();
 
+        int GetDamag(int damag) override;
         void Attak(Unit& enemy) override;
         void Defence();
     };

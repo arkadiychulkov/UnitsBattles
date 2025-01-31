@@ -37,4 +37,11 @@ namespace UnintSpace {
         weaponn->Upgrade();
         std::cout << name << "Defence or Undefence\n";
     }
+
+    int swordsman::GetDamag(int damag) {
+        int trud = hp - damag;
+        this->hp -= damag;
+        std::cout << name << hp << "Ouch!\n";
+        return trud;
+    }
 }

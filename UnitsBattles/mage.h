@@ -15,6 +15,7 @@ namespace UnintSpace {
         mage(std::string name, WeaponSpace::stick& weap, int hp, unsigned int mana);
         mage();
 
+        int GetDamag(int damag) override;
         void Attak(Unit& enemy) override;
         void Defence();
     };

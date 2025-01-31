@@ -22,7 +22,7 @@ namespace UnintSpace {
 		bool GetDef();
 		bool IsDead();
 
-		int GetDamag(int damag);//TakeDamag
+		virtual int GetDamag(int damag) = 0;//TakeDamag
 
 		int ReturnDamagByGrade(WeaponSpace::Grade grade);
 
