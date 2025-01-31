@@ -1,5 +1,6 @@
 #pragma once
 #include<string>
+#include"ISerializable.h"
 
 namespace WeaponSpace {
 	enum Grade {
@@ -10,7 +11,7 @@ namespace WeaponSpace {
 		Myphic
 	};
 
-	class weapon
+	class weapon : ISerializable
 	{
 	protected:
 		Grade grade;
@@ -24,5 +25,12 @@ namespace WeaponSpace {
 		Grade GetDamage();
 		virtual void Upgrade() = 0;
 		int GetUron();//он нужен
+
+		virtual std::ostream& Serialize(std::ostream& output) = 0;
+		virtual std::istream& Deserialize(std::istream& input) = 0;
+		virtual std::ostream& Serialize(std::string& path) = 0;
+		virtual std::istream& Deserialize(std::string& path) = 0;
+		virtual std::ostream& Serialize() = 0;
+		virtual std::istream& Deserialize() = 0;
 	};
 }
